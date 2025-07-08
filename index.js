@@ -23,6 +23,15 @@ app.use(admin_router);
 app.use(patient_router);
 app.use("/public",public_router)
 app.use(doctor_router);
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// middlewares, db connection, routes...
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 // {
 //     origin:"www.xyz.com",
